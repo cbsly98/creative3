@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+<div id="app">
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/characters">Characters</router-link>
   </div>
+  <div class="content">
+    <router-view />
+  </div>
+</div>
 </template>
 
 <style>
@@ -14,7 +16,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #DDDDDD;
+  height: 100%;
+  width: 100%
 }
 
 #nav {
@@ -23,10 +27,19 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #DDDDDD;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+html {
+  background: url('../public/images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+  margin: 0px;
 }
 </style>
